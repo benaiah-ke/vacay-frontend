@@ -19,7 +19,7 @@ export default function Experiences(){
             price: "KSh 30,000",
             image: "https://viutravel-cms-bucket.s3.eu-west-1.amazonaws.com/1307/conversions/102632650-thumbnail.webp",  
             description: "Sarova Whitesands Beach Resort & Spa is situated north of Mombasa on one of East Arica's most stunning beaches, manicured grounds, Arabic architecture and wonderful facilities making it simply the place to stay on the Kenyan coast. The Resort is set on 23 acres of land, and has the longest beach front on the North Coast giving you panoramic views to the Indian Ocean. ",
-            activity: ""
+            activity: "Some activity, other activity"
             
         },
         {
