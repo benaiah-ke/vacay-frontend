@@ -2,6 +2,7 @@ import { useContext } from "react"
 import { Navigate, NavLink, Route, Routes } from "react-router-dom"
 import { APP_ROUTES } from "../../../../config/routes"
 import { UserContext } from "../../../../context/user"
+import Experiences from "../../explore/Experiences"
 import NotFound from "../../NotFound"
 import Dashboard from "../Dashboard/Dashboard"
 import Profile from "../Profile/Profile"
@@ -26,7 +27,7 @@ export default function UserArea(){
 
                     {/* FIXED SIDENAV */}
                     <div className="col-12 col-md-3">
-                        <div className="card">
+                        <div className="card sticky-top">
                             <div className="card-body border-bottom">
                                 <h5 className="mb-2">{currentUser.name}</h5>
                                 <div className="mb-3">{currentUser.email}</div>
@@ -67,6 +68,8 @@ export default function UserArea(){
                             <Route path={APP_ROUTES.DASHBOARD.replace("user/", "")} element={<Dashboard />} />
                             
                             <Route path={APP_ROUTES.PROFILE.replace("user/", "")} element={<Profile />} />
+                            
+                            <Route path={APP_ROUTES.NEW_EXPERIENCE.replace("user/", "")} element={<Experiences />} />
                             
                             {/* Other non-supported routes */}
                             <Route path="*" element={<NotFound />} />

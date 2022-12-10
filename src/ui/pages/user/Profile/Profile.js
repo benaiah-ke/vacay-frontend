@@ -225,7 +225,7 @@ export default function Profile(){
                                     <div className="col-12 col-md-6 col-lg-8">
                                         <input className="form-control" onChange={updateConfirmPassword} type="password" value={passwordData.confirm_password} />
                                         {
-                                            passwordData.confirm_password != "" && passwordData.new_password !== passwordData.confirm_password ?
+                                            passwordData.confirm_password !== "" && passwordData.new_password !== passwordData.confirm_password ?
                                                 <small className="text-danger">Passwords do not match</small>
                                                 :
                                                 <small>Type new password again</small>
