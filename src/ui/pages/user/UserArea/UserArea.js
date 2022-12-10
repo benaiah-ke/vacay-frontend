@@ -1,8 +1,10 @@
 import { useContext } from "react"
 import { Navigate, NavLink, Route, Routes } from "react-router-dom"
 import { APP_ROUTES } from "../../../../config/routes"
+import { BookingDataProvider } from "../../../../context/booking_data"
 import { UserContext } from "../../../../context/user"
 import Experiences from "../../explore/Experiences"
+import SingleExperience from "../../explore/SingleExperience"
 import NotFound from "../../NotFound"
 import Dashboard from "../Dashboard/Dashboard"
 import Profile from "../Profile/Profile"
@@ -69,7 +71,11 @@ export default function UserArea(){
                             
                             <Route path={APP_ROUTES.PROFILE.replace("user/", "")} element={<Profile />} />
                             
-                            <Route path={APP_ROUTES.NEW_EXPERIENCE.replace("user/", "")} element={<Experiences />} />
+                            <Route path={APP_ROUTES.NEW_EXPERIENCE.replace("user/", "") + "/*"} element={
+                                <BookingDataProvider>
+                                    <Experiences />
+                                </BookingDataProvider>
+                            } />
                             
                             {/* Other non-supported routes */}
                             <Route path="*" element={<NotFound />} />

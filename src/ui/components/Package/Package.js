@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+import { APP_ROUTES, getRoute } from '../../../config/routes'
 import './Package.css'
 
 export default function Package({ packageItem }) {
@@ -17,9 +19,9 @@ export default function Package({ packageItem }) {
                     {packageItem.price}
                 </div>
 
-                <button className="btn btn-primary btn-block">
+                <Link to={getRoute(APP_ROUTES.BOOK_EXPERIENCE, {id: packageItem.id})} className="btn btn-primary btn-block">
                     Make Reservation
-                </button>
+                </Link>
             </div>
         </div>
     )

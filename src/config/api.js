@@ -11,6 +11,7 @@ const API_ENDPOINTS = {
 
     // Expeeriences
     GET_PACKAGES: API + "packages",
+    BOOK_PACKAGE: API + "book-package"
 }
 
 /**

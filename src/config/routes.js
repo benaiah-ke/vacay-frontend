@@ -10,6 +10,7 @@ const APP_ROUTES = {
     PROFILE: "/user/profile",
     EXPERIENCES: "/user/experiences",
     NEW_EXPERIENCE: "/user/new-experience",
+    BOOK_EXPERIENCE: "/user/new-experience/:id",
 
 }
 

@@ -1,16 +1,11 @@
 import { format } from 'date-fns';
-import { useState } from "react"
+import { useContext, useState } from "react"
 import Flatpickr from "react-flatpickr";
+import { BookingDataContext } from '../../../context/booking_data';
 import Loader from "../../components/Loader"
 
-export default function BookingOptions({ loading, onSubmit }) {
-    const [bookingData, setBookingData] = useState({
-        destination: "",
-        from: "today",
-        to: "today",
-        adults: 1,
-        kids: 0
-    })
+export default function BookingOptions({ loading, onSubmit, action="Find Travel Package" }){
+    const {bookingData, setBookingData} = useContext(BookingDataContext)
     
     function updateDate(dates){
         var from = format(dates[0], 'yyyy-MM-dd')
@@ -26,7 +21,7 @@ export default function BookingOptions({ loading, onSubmit }) {
     return (
         <div className="card shadow mb-4 border-0" style={{borderRadius: '30px'}}>
             <div className="card-body">
-                <form onSubmit={(e) => {e.preventDefault(); onSubmit(bookingData)}} className="has-loader">
+                <form onSubmit={(e) => {e.preventDefault(); onSubmit()}} className="has-loader">
 
                     {
                         loading ?
@@ -127,8 +122,7 @@ export default function BookingOptions({ loading, onSubmit }) {
 
                         <div className="col-12 col-sm-6 col-lg-4 d-flex align-items-end">
                             <button className="btn btn-block btn-success mb-4">
-                                <i className="fas fa-search mr-2"></i>
-                                Find Travel Packages
+                                {action}
                             </button>
                         </div>
                         
