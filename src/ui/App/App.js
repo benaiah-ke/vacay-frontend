@@ -4,6 +4,8 @@ import { APP_ROUTES } from '../../config/routes';
 import Header from '../components/Header/Header';
 import Login from '../pages/auth/Login/Login';
 import Register from '../pages/auth/Register/Register';
+import NotFound from '../pages/NotFound';
+import UserArea from '../pages/user/UserArea/UserArea';
 import './App.css';
 
 function App() {
@@ -14,10 +16,15 @@ function App() {
 
       <Routes>
 
-        <Route path="*" element={<Register />} />
+        {/* AUTH */}
+        <Route path={APP_ROUTES.LOGIN} element={<Login />} />
+        <Route path={APP_ROUTES.REGISTER} element={<Register />} />
+
+        {/* USER */}
+        <Route path="/user/*" element={<UserArea />} />
 
         {/* 404 */}
-        {/* <Route path="*" element={<div>Page Not Found</div>} /> */}
+        <Route path="*" element={<NotFound />} />
       
       </Routes>
 

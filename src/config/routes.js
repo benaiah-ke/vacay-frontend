@@ -6,8 +6,10 @@ const APP_ROUTES = {
     REGISTER: "/register",
 
     // User
-    DASHBOARD: "/dashboard",
-    PROFILE: "/profile",
+    DASHBOARD: "/user/dashboard",
+    PROFILE: "/user/profile",
+    EXPERIENCES: "/user/experiences",
+    NEW_EXPERIENCE: "/user/experiences/new",
 
 }
 

@@ -20,3 +20,30 @@
     z-index: 10;
 }
 
+.icon{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.link-card{
+    background: #4385c410;
+    color: currentColor;
+    transition: all 0.3s;
+    text-decoration: none !important;
+}
+
+.link-card:hover, .link-card:focus, .link-card:active{
+    background: #4385c4;
+    color: #fff;
+}
+
+.link-card:hover .icon, .link-card:focus .icon, .link-card:active .icon{
+    background: #fff !important;
+    color: #4385c4 !important;
+}
+
