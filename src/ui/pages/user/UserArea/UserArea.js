@@ -7,6 +7,7 @@ import Experiences from "../../explore/Experiences"
 import SingleExperience from "../../explore/SingleExperience"
 import NotFound from "../../NotFound"
 import Dashboard from "../Dashboard/Dashboard"
+import History from "../History/History"
 import Profile from "../Profile/Profile"
 
 export default function UserArea(){
@@ -70,6 +71,8 @@ export default function UserArea(){
                             <Route path={APP_ROUTES.DASHBOARD.replace("user/", "")} element={<Dashboard />} />
                             
                             <Route path={APP_ROUTES.PROFILE.replace("user/", "")} element={<Profile />} />
+
+                            <Route path={APP_ROUTES.HISTORY.replace("user/", "")} element={<History />} />
                             
                             <Route path={APP_ROUTES.NEW_EXPERIENCE.replace("user/", "") + "/*"} element={
                                 <BookingDataProvider>
