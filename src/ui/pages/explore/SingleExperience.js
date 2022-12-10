@@ -1,13 +1,11 @@
 import { useContext, useEffect, useState } from "react"
-import { Navigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Swal from "sweetalert2"
 import { API_ENDPOINTS, getApiUrl } from "../../../config/api"
-import { APP_ROUTES } from "../../../config/routes";
 import { BookingDataContext } from "../../../context/booking_data";
-import { get, post } from "../../../helpers/requests"
+import { post } from "../../../helpers/requests"
 import BookingOptions from '../../components/BookingOptions/BookingOptions';
 import Loader from "../../components/Loader";
-import Package from "../../components/Package/Package"
 import NotFound from "../NotFound";
 
 export default function SingleExperience({ packages }){

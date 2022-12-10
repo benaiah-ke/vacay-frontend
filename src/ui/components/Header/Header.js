@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
+import { NavLink } from 'react-router-dom';
+import { APP_ROUTES } from '../../../config/routes';
 import { UserContext } from '../../../context/user';
 import './Header.css';
 
 export default function Header() {
-  // const [currentUser, setCurrentUser] = useContext(UserContext)
+  const {currentUser, setCurrentUser} = useContext(UserContext)
 
     return (
       <header>
@@ -11,10 +13,10 @@ export default function Header() {
           <div className="container-fluid">
 
               <div className="navbar-header">
-                  <a href="index.php" className="navbar-brand d-flex align-items-center">
+                  <NavLink to={APP_ROUTES.HOME} className="navbar-brand d-flex align-items-center">
                       <img className="logo mr-3" src="/logo.png" alt="Logo" />
                       <span>Vacay</span>
-                  </a>
+                  </NavLink>
               </div>
 
               <button className="btn ml-auto d-md-none navbar-toggle" data-toggle="collapse" data-target="#menu">
@@ -26,22 +28,22 @@ export default function Header() {
               <div className="collapse navbar-collapse ml-md-auto" id="menu" aria-expanded="false">
                   <ul className="mt-4 mt-md-0 nav navbar-nav ml-md-auto">
                     {
-                    1 == 1 ?
+                    currentUser ?
                       <>
                       <li className="nav-item">
-                          <a className="nav-link" href="dashboard.php">Dashboard</a>
+                          <NavLink to={APP_ROUTES.DASHBOARD} className="nav-link">Dashboard</NavLink>
                       </li>
 
                       <li className="nav-item">
-                          <a className="nav-link" href="history.php">My History</a>
+                          <NavLink to={APP_ROUTES.HISTORY} className="nav-link">My History</NavLink>
                       </li>
 
                       <li className="nav-item">
-                          <a className="nav-link" href="deposit.php">New Booking</a>
+                          <NavLink to={APP_ROUTES.NEW_EXPERIENCE} className="nav-link">New Booking</NavLink>
                       </li>
 
                       <li className="nav-item">
-                          <a className="nav-link" href="send.php">Profile</a>
+                          <NavLink to={APP_ROUTES.PROFILE} className="nav-link">Profile</NavLink>
                       </li>
                       </>
 
@@ -49,11 +51,11 @@ export default function Header() {
                       <>
 
                         <li className="nav-item">
-                            <a className="nav-link" href="login.php">Sign In</a>
+                            <NavLink to={APP_ROUTES.LOGIN} className="nav-link">Sign In</NavLink>
                         </li>
 
                         <li className="nav-item">
-                            <a className="btn btn-primary ml-4" href="signup.php">Get Started</a>
+                            <NavLink to={APP_ROUTES.REGISTER} className="btn btn-primary ml-4">Get Started</NavLink>
                         </li>
 
                       </>

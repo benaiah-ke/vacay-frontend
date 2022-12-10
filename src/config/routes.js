@@ -8,7 +8,7 @@ const APP_ROUTES = {
     // User
     DASHBOARD: "/user/dashboard",
     PROFILE: "/user/profile",
-    EXPERIENCES: "/user/experiences",
+    HISTORY: "/user/experiences",
     NEW_EXPERIENCE: "/user/new-experience",
     BOOK_EXPERIENCE: "/user/new-experience/:id",
 

@@ -28,7 +28,7 @@ export default function UserArea(){
                 <div className="row">
 
                     {/* FIXED SIDENAV */}
-                    <div className="col-12 col-md-3">
+                    <div className="col-12 col-md-3 d-none d-md-block">
                         <div className="card sticky-top">
                             <div className="card-body border-bottom">
                                 <h5 className="mb-2">{currentUser.name}</h5>
@@ -54,7 +54,7 @@ export default function UserArea(){
                                         <i className="mr-2 fa fa-fw fa-add"></i>New Booking
                                     </NavLink>
 
-                                    <NavLink className="list-group-item list-group-item-action" to={APP_ROUTES.EXPERIENCES}>
+                                    <NavLink className="list-group-item list-group-item-action" to={APP_ROUTES.HISTORY}>
                                         <i className="mr-2 fa fa-fw fa-calendar"></i>Booking History
                                     </NavLink>
                                 </div>
