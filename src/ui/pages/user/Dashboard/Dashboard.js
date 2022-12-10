@@ -10,6 +10,8 @@ export default function Dashboard(){
         <section>
             <div className="container">
 
+                <h3>Dashboard</h3>
+
                 <p>
                     Welcome {currentUser.name}, We have assembled some links to get you going
                 </p>
@@ -36,7 +38,7 @@ export default function Dashboard(){
                     </div>
 
                     <div className="col-12 col-md-6 col-lg-6 mb-4">
-                        <Link className="card link-card" to={APP_ROUTES.EXPERIENCES}>
+                        <Link className="card link-card" to={APP_ROUTES.HISTORY}>
                             <div className="card-body">
                                 <div className="d-flex align-items-center">
                                     <span className="icon bg-primary text-white">
