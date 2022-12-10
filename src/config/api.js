@@ -2,6 +2,7 @@ const API = 'localhost:3000/'
 
 const API_ENDPOINTS = {
     LOGIN: API + "login",
+    REGISTER: API + "register",
 }
 
 /**

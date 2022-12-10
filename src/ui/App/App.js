@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import { APP_ROUTES } from '../../config/routes';
 import Header from '../components/Header/Header';
 import Login from '../pages/auth/Login/Login';
+import Register from '../pages/auth/Register/Register';
 import './App.css';
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
 
       <Routes>
 
-        <Route path="*" element={<Login />} />
+        <Route path="*" element={<Register />} />
 
         {/* 404 */}
         {/* <Route path="*" element={<div>Page Not Found</div>} /> */}
