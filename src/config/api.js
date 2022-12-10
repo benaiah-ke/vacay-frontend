@@ -1,8 +1,13 @@
 const API = 'localhost:3000/'
 
 const API_ENDPOINTS = {
+    // Auth
     LOGIN: API + "login",
     REGISTER: API + "register",
+
+    // User
+    UPDATE_PROFILE: API + "user/update-profile",
+    UPDATE_PASSWORD: API + "user/update-password",
 }
 
 /**

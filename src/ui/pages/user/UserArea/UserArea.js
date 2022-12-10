@@ -52,7 +52,7 @@ export default function UserArea(){
                                     </NavLink>
 
                                     <NavLink className="list-group-item list-group-item-action" to={APP_ROUTES.EXPERIENCES}>
-                                        <i className="mr-2 fa fa-fw fa-calendar"></i>History
+                                        <i className="mr-2 fa fa-fw fa-calendar"></i>Booking History
                                     </NavLink>
                                 </div>
                             </div>
