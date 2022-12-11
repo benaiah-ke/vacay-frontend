@@ -1,18 +1,18 @@
-const API = 'localhost:3000/'
+const API = 'https://vacay-backend.up.railway.app/'
 
 const API_ENDPOINTS = {
     // Auth
     LOGIN: API + "login",
-    REGISTER: API + "register",
+    REGISTER: API + "signup",
     GET_CURRENT_USER: API + "me",
 
     // User
-    UPDATE_PROFILE: API + "user/update-profile",
-    UPDATE_PASSWORD: API + "user/update-password",
+    UPDATE_PROFILE: API + "users/:id",
+    UPDATE_PASSWORD: API + "users/:id",
 
     // Expeeriences
-    GET_PACKAGES: API + "packages",
-    BOOK_PACKAGE: API + "book-package",
+    GET_PACKAGES: API + "destinations",
+    BOOK_PACKAGE: API + "reservations",
 
     GET_BOOKING_HISTORY: API + "user/booking-history",
     DELETE_BOOKING: API + "user/delete-booking/:id", // :id - id of booking to delete

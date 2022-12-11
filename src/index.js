@@ -6,7 +6,7 @@ import App from './ui/App/App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter basename="app">
+  <BrowserRouter>
     <>
       <UserProvider>
         <App />
