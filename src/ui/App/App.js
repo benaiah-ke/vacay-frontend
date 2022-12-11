@@ -4,6 +4,7 @@ import { APP_ROUTES } from '../../config/routes';
 import Header from '../components/Header/Header';
 import Login from '../pages/auth/Login/Login';
 import Register from '../pages/auth/Register/Register';
+import Landing from '../pages/landing/Landing';
 import NotFound from '../pages/NotFound';
 import UserArea from '../pages/user/UserArea/UserArea';
 import './App.css';
@@ -15,6 +16,7 @@ function App() {
       <Header />
 
       <Routes>
+        <Route path={APP_ROUTES.HOME} element={<Landing />} />
 
         {/* AUTH */}
         <Route path={APP_ROUTES.LOGIN} element={<Login />} />
