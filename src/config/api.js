@@ -4,6 +4,7 @@ const API_ENDPOINTS = {
     // Auth
     LOGIN: API + "login",
     REGISTER: API + "register",
+    GET_CURRENT_USER: API + "me",
 
     // User
     UPDATE_PROFILE: API + "user/update-profile",
@@ -11,7 +12,10 @@ const API_ENDPOINTS = {
 
     // Expeeriences
     GET_PACKAGES: API + "packages",
-    BOOK_PACKAGE: API + "book-package"
+    BOOK_PACKAGE: API + "book-package",
+
+    GET_BOOKING_HISTORY: API + "user/booking-history",
+    DELETE_BOOKING: API + "user/delete-booking/:id", // :id - id of booking to delete
 }
 
 /**

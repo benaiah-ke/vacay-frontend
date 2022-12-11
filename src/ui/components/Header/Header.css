@@ -9,3 +9,7 @@
 .navbar-toggle span:last-child{
     margin: 0;
 }
+
+header .logo{
+    height: 30px;
+}
