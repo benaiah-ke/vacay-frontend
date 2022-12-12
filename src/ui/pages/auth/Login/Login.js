@@ -39,17 +39,17 @@ export default function Login() {
             .then((response) => {
                 setLoading(false) // Done
 
-                if(response.success){
+                if(!response.error){
                     // Authenticated
                     // User is at data.user
-                    setCurrentUser(response.data.user)
+                    setCurrentUser(response)
 
                     navigate(APP_ROUTES.DASHBOARD)
                 }else{
                     Swal.fire({
                         icon: 'error',
                         title: 'Login Failed',
-                        text: 'Unable to log you in. Please check the credentials and try again',
+                        text: response.error,
                     })
                 }
             })

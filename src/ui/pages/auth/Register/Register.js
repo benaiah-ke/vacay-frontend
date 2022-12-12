@@ -18,9 +18,9 @@ export default function Register() {
 
     const [userData, setUserData] = useState({
         name: "",
-        phone: "",
+        phone_number: "",
         email: "",
-        password: ""
+        password: "",
     })
 
     // If a user is already logged in, redirect to the dashboard
@@ -41,17 +41,17 @@ export default function Register() {
             .then((response) => {
                 setLoading(false) // Done
 
-                if(response.success){
+                if(!response.error){
                     // Registered
                     // User is at data.user
-                    setCurrentUser(response.data.user)
+                    setCurrentUser(response)
 
                     navigate(APP_ROUTES.DASHBOARD)
                 }else{
                     Swal.fire({
                         icon: 'error',
                         title: 'Registration Failed',
-                        text: 'Unable to create an account. Please try again',
+                        text: response.error,
                     })
                 }
             })
@@ -62,7 +62,7 @@ export default function Register() {
                 Swal.fire({
                     icon: 'error',
                     title: 'Registration Failed',
-                    text: 'Something went wrong. Please try again',
+                    text: error,
                 })
             })
     }
@@ -78,7 +78,7 @@ export default function Register() {
     }
 
     function updatePhone(event){
-        setUserData({ ...userData, phone: event.target.value })
+        setUserData({ ...userData, phone_number: event.target.value })
     }
 
     function updatePassword(event){
@@ -132,7 +132,7 @@ export default function Register() {
                                                 <i className="fa fa-fw fa-phone"></i>
                                             </span>
                                         </div>
-                                        <input className="form-control" placeholder="Phone Number" type="tel" value={userData.phone} onChange={updatePhone} required />
+                                        <input className="form-control" placeholder="Phone Number" type="tel" value={userData.phone_number} onChange={updatePhone} required />
                                     </div>
                                 </div>
 

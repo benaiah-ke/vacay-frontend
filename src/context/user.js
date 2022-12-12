@@ -14,9 +14,9 @@ function UserProvider({ children }) {
       .then((response) => {
 
         // Check if successful
-        if (response.success) {
+        if (!response.error) {
           // Set the user info
-          setCurrentUser(response.data);
+          setCurrentUser(response);
         }
 
       })
